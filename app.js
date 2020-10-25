@@ -32,10 +32,10 @@ const geoCode = require("./geocode.js");
 const forecast = require("./forecast.js");
 
 //get geocode
-geoCode(process.argv[2], (err, { latitude, longitute }) => {
+geoCode(process.argv[2], (err, { latitude, longitude }) => {
   if (!err) {
-    console.log(latitude, longitute);
-    forecast(latitude, longitute, (err, res) => {
+    console.log(latitude, longitude);
+    forecast(latitude, longitude, (err, res) => {
       if (!err) {
         console.log(res);
       } else {
